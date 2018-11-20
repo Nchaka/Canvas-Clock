@@ -1,3 +1,10 @@
+/**
+    Project: HTML5 Canvas Clock
+    Author: N'chaka Benjamin
+    Site: http://njbenjamin.com
+    Date: Nov-20-2018
+*/  
+
 window.onload = init;
 
 function init(){
@@ -138,6 +145,7 @@ function cTime(){
 	minute = now.getMinutes();
 	second = now.getSeconds();
 	hour = hour % 12;
+	// Rotations
 	hourlyR = (hour * Math.PI / 6) + (minute * Math.PI / (6 * 60)) + (second * Math.PI / (360 * 60));
 	minutelyR = (minute * Math.PI / 30) + (second * Math.PI / (30 * 60));
 	secondlyR = (second * Math.PI / 30);
